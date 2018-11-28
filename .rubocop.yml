@@ -1,0 +1,13 @@
+AllCops:
+  TargetRubyVersion: 2.3
+
+Style/WordArray:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - test/**/*

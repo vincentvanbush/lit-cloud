@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 appraise 'rails-4.2' do
   source 'https://rubygems.org'
   gem 'rails', '~> 4.2.10'
