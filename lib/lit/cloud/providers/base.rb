@@ -11,7 +11,7 @@ module Lit::Cloud::Providers
       @config = config
     end
 
-    def translate(text:, from:, to:, opts: {}) # rubocop:disable Lint/UnusedMethodArgument, Metrics/MethodLength
+    def translate(text:, from:, to:, opts: {}) # rubocop:disable Lint/UnusedMethodArgument, Metrics/LineLength
       raise NotImplementedError
     end
 
@@ -26,7 +26,9 @@ module Lit::Cloud::Providers
     class TranslationError < StandardError; end
 
     class << self
-      delegate :translate, to: :instance
+      def translate(*args)
+        instance.translate(*args)
+      end
 
       private
 
